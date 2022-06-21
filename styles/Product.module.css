@@ -14,7 +14,8 @@
 }
 
 .product_image{
-  width: 140px;
+  width: 150px;
+  background-image: url(https://via.placeholder.com/150?text=Your+File);
   background-color: #141414;
 }
 

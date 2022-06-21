@@ -1,5 +1,5 @@
 .background_blur{
-  background-image: url(../public/blur-bg.png);
+  background-image: hidden;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -10,40 +10,52 @@
   left: 0;
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
+  display: grid;
+  place-items: center;                
 }
 
 .create_product_container {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  display: flex;
-  position: fixed;
+  display: auto;
+  position: static;
   top: 50%;
   left: 50%;
-  margin-top: -250px; /* Negative half of height. */
-  margin-left: -250px; /* Negative half of width. */
+  margin: auto;
   justify-content: center;
-  align-items: center;
+  place-items: center;
+  border-radius: 0 0 20px 20px;
 }
 
 .create_product_form {
   color: white;
-  display: flex;
+  display: auto;
   flex-direction: column;
+  max-width: 500px;
+  place-items: center;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 75px;
+  border-radius: 0 0 10px 10px;
+  padding: 0 0 20px 20px;
 }
 
 .button {
-  width: 99%;
+  width: 95%;
+  height: 40px;
   background-color: white;
   color: black;
   transition: 0.3s;
-  margin: 10px 0;
-  align-self: flex-start;
+  margin: 10px;
+  align-self: center;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 18px;
 }
 
 .button:hover {
-  background-image: url(../public/blur-bg.png);
+  background-color: rgb(253, 36, 144);
   color: white;
   -webkit-animation: bg-pan-left 2s linear infinite alternate both;
   animation: bg-pan-left 2s ease-in-out infinite alternate both;
@@ -51,49 +63,57 @@
 
 .header {
   text-align: center;
-  background-image: url(../public/blur-bg.png);
-  padding: 0 150px;
+  background-color: rgb(253, 36, 144);
+  padding: 10px;
   border-radius: 10px 10px 0 0;
+  margin-top: 50px;
 }
 
 .form_container {
   background-color: #141414;
-  padding: 20px;
-  display: flex;
+  padding: 10px 10px 10px 10px;
+  border-radius: 0 0 10px 10px;
+  display: auto;
   flex-direction: column;
+  text-align: center;
 }
 
 .input {
   background-color: rgb(46, 46, 46);
-  border: none;
+  border-style: groove;
   font-size: 1.1rem;
-  padding: 15px;
-  border-radius: 7px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 10px;
   color: white;
-  outline: none;
+  outline:rgb(253, 36, 144);
+  outline-style:double;
   box-sizing: border-box;
-  margin: 10px 0;
-  width: 48%;
+  margin: 10px 10px 10px 10px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 95%;
+  text-align: match-parent;
 }
 
 .input[type="file"] {
-  width: 100%;
-  height: 80px;
-  display: flex;
+  width: 40%;
+  height: 45%;
+  display: auto;
   justify-content: center;
   align-items: center;
   color: transparent;
   cursor: pointer;
+  text-align: center;
 }
 
 .input[type="file"]::before {
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: auto;
+  justify-content: auto;
+  text-align: center;
+  justify-items: auto;
   content: "Click to Upload Files";
   height: 100%;
+  width: 100%;
   box-sizing: content-box;
   font-weight: 500;
 }
@@ -103,17 +123,27 @@
 }
 
 .flex_row {
-  display: flex;
+  display: auto;
   justify-content: space-between;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  align-items: center;
+  text-align: center;
 }
 
 .input[type="url"] {
-  width: 100%;
+  width: 95%;
+  height: 40px;
+  text-align: center;
+  align-items: center;
+  padding: 5px;
 }
 
 .flex_full_row{
-  display: flex;
+  display: auto;
   width: 100%;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
@@ -133,4 +163,26 @@
   margin: 10px 0;
   width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.image_holder {
+  
+  max-height: 500px;
+  max-width: 500px;
+  border-radius: 10px;
+  display: auto;
+  justify-content: auto;
+  place-items: auto;
+  
+}
+
+.image {
+  height: auto;
+  width: auto;
+  max-height: 440px;
+  max-width: 440px;
+  display: auto;
+  justify-items:auto;
+  border-radius: 20px;
+  padding: 10px
 }
