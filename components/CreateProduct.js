@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { create } from "ipfs-http-client";
 import styles from "../styles/CreateProduct.module.css";
-
-
+import Image from "next/image"
 
 const client = create("https://ipfs.infura.io:5001/api/v0");
 
@@ -62,7 +61,7 @@ const CreateProduct = () => {
 
                     <div className={styles.form_container}>
                         <div className={styles.image_holder}>
-                            <img src={file} className={styles.image}  />
+                            <Image src={file} className={styles.image} alt="file image"  />
                         </div>
                         <input
                             type="file"
