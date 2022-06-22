@@ -116,7 +116,7 @@ export default function Buy({ itemID }) {
         if (status === STATUS.Paid) {
             getItem(itemID);
         }
-    }, [status]);
+    }, [status,order,itemID,connection,orderID]);
 
     if (!publicKey) {
         return (

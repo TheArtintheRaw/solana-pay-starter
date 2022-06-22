@@ -83,7 +83,7 @@ const App = () => {
             className="footer-text"
             href={TWITTER_LINK2}
             target="_blank"
-            rel="noreferrer noopener"
+            rel="noreferrer noOpener"
           >{`built by @${TWITTER_HANDLE2}`}</a>
         </div>
       </div>

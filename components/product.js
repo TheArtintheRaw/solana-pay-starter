@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/Product.module.css";
-import Buy from './Buy';
+import Buy from './BuySol';
 import Image from "next/image"
 
 export default function Product({ product }) {

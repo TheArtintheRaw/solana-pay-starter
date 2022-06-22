@@ -1,9 +1,10 @@
 import React, { useState, useMemo, useEffect } from "react";
 import { Keypair, Transaction } from "@solana/web3.js";
+import { findReference, FindReferenceError } from '@solana/pay';
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
 import { Hearts } from "react-loader-spinner";
 import IPFSDownload from "./IpfsDownload";
-import { addOrder } from "../lib/api";
+import { addOrder, hasPurchased, fetchItem } from "../lib/api";
 
 const STATUS = {
     Initial: "Initial",
