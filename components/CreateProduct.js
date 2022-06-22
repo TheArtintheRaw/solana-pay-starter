@@ -62,7 +62,7 @@ return (
 
       	<div className={styles.form_container}>
         	<div className={styles.image_holder}>
-          	<Image src={file} className={styles.image} alt="file's image" height={auto} width={auto}  />
+          	<Image src={file} className={styles.image} alt="file's image" height={250} width={250}  />
           </div>
             <input
               type="file"

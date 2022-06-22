@@ -28,8 +28,8 @@ async function post(req, res) {
     } else {
       res.status(400).send("Order already exists");
     }
-  } catch (err) {
-    res.status(400).send(err);
+  } catch (error) {
+    res.status(400).send(error);
   }
 }
 

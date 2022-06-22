@@ -11,7 +11,7 @@ import BigNumber from "bignumber.js";
 import products from "./products.json";
 
 // Make sure you replace this with your wallet address!
-const sellerAddress = 'DDqyXJVDdMM9QfjhpuvsynNpC8xnCdX6EjPRgzhP23bZ'
+const sellerAddress = "DDqyXJVDdMM9QfjhpuvsynNpC8xnCdX6EjPRgzhP23bZ";
 const sellerPublicKey = new PublicKey(sellerAddress);
 
 const createTransaction = async (req, res) => {
@@ -21,29 +21,30 @@ const createTransaction = async (req, res) => {
 
     // If we don't have something we need, stop!
     if (!buyer) {
-      return res.status(400).json({
+       res.status(400).json({
         message: "Missing buyer address",
       });
     }
 
     if (!orderID) {
-      return res.status(400).json({
-        message: "Missing order ID",
-      });
-    }
+      res.status(400).json({
+      message: "Missing order ID",
+    });
+  }
 
     // Fetch item price from products.json using itemID
     const itemPrice = products.find((item) => item.id === itemID).price;
 
     if (!itemPrice) {
-      return res.status(404).json({
-        message: "Item not found. please check item ID",
+      res.status(404).json({
+      	message: "Item not found. please check item ID",
       });
     }
     
     // Convert our price to the correct format
     const bigAmount = BigNumber(itemPrice);
     const buyerPublicKey = new PublicKey(buyer);
+
     const network = WalletAdapterNetwork.Mainnet;
     const endpoint = clusterApiUrl(network);
     const connection = new Connection(endpoint);
@@ -66,7 +67,7 @@ const createTransaction = async (req, res) => {
       lamports: bigAmount.multipliedBy(LAMPORTS_PER_SOL).toNumber(), 
       toPubkey: sellerPublicKey,
     });
-
+    
     // We're adding more instructions to the transaction
     transferInstruction.keys.push({
       // We'll use our OrderId to find this transaction later
@@ -81,6 +82,7 @@ const createTransaction = async (req, res) => {
     const serializedTransaction = tx.serialize({
       requireAllSignatures: false,
     });
+
     const base64 = serializedTransaction.toString("base64");
 
     res.status(200).json({
@@ -92,7 +94,7 @@ const createTransaction = async (req, res) => {
     res.status(500).json({ error: "error creating tx" });
     return;
   }
-}
+};
 
 export default function handler(req, res) {
   if (req.method === "POST") {

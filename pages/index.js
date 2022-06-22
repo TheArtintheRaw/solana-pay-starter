@@ -9,9 +9,9 @@ import Image from "next/image";
 
 // Constants
 const TWITTER_HANDLE = "_buildspace";
-const TWITTER_LINK = `https://twitter.com/${TWITTER_HANDLE}`;
+const TWITTER_LINK = "https://twitter.com/${TWITTER_HANDLE}";
 const TWITTER_HANDLE2 = "theartintheraw";
-const TWITTER_LINK2 = `https://twitter.com/${TWITTER_HANDLE2}`;
+const TWITTER_LINK2 = "https://twitter.com/${TWITTER_HANDLE2}";
 
 const App = () => {
   const { publicKey } = useWallet();
