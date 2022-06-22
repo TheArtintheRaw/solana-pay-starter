@@ -1,7 +1,8 @@
 {
   "name": "solana-payments-app",
   "version": "0.1.0",
-  "private": true,
+  "private": true,  
+  "license": "(MIT OR Apache-2.0)",
   "scripts": {
     "clean": "shx rm -rf .next",
     "dev": "next dev",
