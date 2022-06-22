@@ -6,7 +6,7 @@ import Product from "../components/product.js";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import Image from "next/image";
-import Twitterlogo from '../public/twitter_logo.svg';
+import Twitterlogo from '../public/twitter-logo.svg';
 
 // Constants
 const TWITTER_HANDLE = "_buildspace";
