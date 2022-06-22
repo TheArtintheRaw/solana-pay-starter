@@ -179,8 +179,8 @@
 .image {
   height: auto;
   width: auto;
-  max-height: 440px;
-  max-width: 440px;
+  max-height: 500px;
+  max-width: 500px;
   display: auto;
   justify-items:auto;
   border-radius: 20px;
