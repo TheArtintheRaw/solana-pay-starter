@@ -6,6 +6,7 @@ import Product from "../components/product.js";
 import { useWallet } from "@solana/wallet-adapter-react";
 import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import Image from "next/image";
+import Twitterlogo from '../public/twitter_logo.svg';
 
 // Constants
 const TWITTER_HANDLE = "_buildspace";
@@ -22,7 +23,7 @@ const App = () => {
 
   const renderNotConnectedContainer = () => (
     <div>
-      <Image src={"https://ghostlifeclub.mypinata.cloud/ipfs/QmSj9GspiAg2mVgkDxxSqdMEuQWwt1v6DWH68BMjeTQRNr/"} alt="glc city" height={auto} width={auto} />
+      <Image src="https://ghostlifeclub.mypinata.cloud/ipfs/QmSj9GspiAg2mVgkDxxSqdMEuQWwt1v6DWH68BMjeTQRNr" sizes="50vw" layout="responsive" alt="glc city" height={500} width={500} />
 
       <div className="button-container">
         <WalletMultiButton className="cta-button connect-wallet-button" />
@@ -70,7 +71,7 @@ const App = () => {
         </main>
 
         <div className="footer-container">
-          <a href={TWITTER_LINK} target="_blank" rel="noReferrer"><Image alt="Twitter Logo" className="twitter-logo" src="twitter-logo.svg" height={px30} width={px30} /></a>
+          <a href={TWITTER_LINK} target="_blank" rel="noReferrer"><Image alt="Twitter Logo" className="twitter-logo" src={Twitterlogo} height={px30} width={px30} /></a>
           <a 
             className="footer-text"
             href={TWITTER_LINK}
@@ -78,7 +79,7 @@ const App = () => {
             rel="noreferrer noopener"
           >{`built on @${TWITTER_HANDLE}`}</a>
         {"\n"}
-          <a href={TWITTER_LINK2} target="_blank" rel="noReferrer"><Image alt="Twitter Logo" className="twitter-logo" src={"solana-payments-app/public/twitter-logo.svg"} height={px20} width={px20} /></a>
+          <a href={TWITTER_LINK2} target="_blank" rel="noReferrer"><Image alt="Twitter Logo" className="twitter-logo" src={Twitterlogo} height={px20} width={px20} /></a>
           <a
             className="footer-text"
             href={TWITTER_LINK2}

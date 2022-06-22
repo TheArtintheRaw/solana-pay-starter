@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { create } from "ipfs-http-client";
 import styles from "../styles/CreateProduct.module.css";
 import Image from "next/image"
+import Placeholder from "../public/iph.png"
 
 const client = create("https://ipfs.infura.io:5001/api/v0");
 
@@ -62,7 +63,7 @@ return (
 
       	<div className={styles.form_container}>
         	<div className={styles.image_holder}>
-          	<Image src={file} className={styles.image} alt="file's image" height={250} width={250} placeholder={"public/iph.png"} />
+          	<Image src={file} className={styles.image} sizes="75vw" layout="responsive" alt="file's image" height={500} width={500} placeholder={Placeholder} />
           </div>
             <input
               type="file"
