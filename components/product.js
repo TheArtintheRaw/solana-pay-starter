@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/Product.module.css";
-import Buy from './BuySol';
+import Buy from "./BuySol";
 import Image from "next/image"
 
 export default function Product({ product }) {
@@ -19,7 +19,7 @@ export default function Product({ product }) {
         </div>
 
         <div className={styles.product_action}>
-          <div className={styles.product_price}>{price} USDC</div>
+          <div className={styles.product_price}>{price} SOL</div>
           {/* I'm hardcoding these for now, we'll fetch the hash from the API later*/}
           <Buy itemID={id} />
         </div>
