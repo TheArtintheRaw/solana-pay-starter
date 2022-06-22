@@ -22,7 +22,7 @@ const App = () => {
 
   const renderNotConnectedContainer = () => (
     <div>
-      <Image  src="https://ghostlifeclub.mypinata.cloud/ipfs/QmSj9GspiAg2mVgkDxxSqdMEuQWwt1v6DWH68BMjeTQRNr/" alt="glc city" />
+      <Image src="https://ghostlifeclub.mypinata.cloud/ipfs/QmSj9GspiAg2mVgkDxxSqdMEuQWwt1v6DWH68BMjeTQRNr/" alt="glc city" height={auto} width={auto} />
 
       <div className="button-container">
         <WalletMultiButton className="cta-button connect-wallet-button" />
@@ -70,20 +70,20 @@ const App = () => {
         </main>
 
         <div className="footer-container">
-          <a href={TWITTER_LINK} target="_blank" rel="noReferrer"><Image alt="Twitter Logo" className="twitter-logo" src="twitter-logo.svg" /></a>
+          <a href={TWITTER_LINK} target="_blank" rel="noReferrer"><Image alt="Twitter Logo" className="twitter-logo" src="twitter-logo.svg" height={auto} width={auto} /></a>
           <a 
             className="footer-text"
             href={TWITTER_LINK}
             target="_blank"
-            rel="noreferrer"
+            rel="noreferrer noopener"
           >{`built on @${TWITTER_HANDLE}`}</a>
         {"\n"}
-          <a href={TWITTER_LINK2} target="_blank" rel="noReferrer"><Image alt="Twitter Logo" className="twitter-logo" src="twitter-logo.svg" /></a>
+          <a href={TWITTER_LINK2} target="_blank" rel="noReferrer"><Image alt="Twitter Logo" className="twitter-logo" src="twitter-logo.svg" height={auto} width={auto} /></a>
           <a
             className="footer-text"
             href={TWITTER_LINK2}
             target="_blank"
-            rel="noreferrer"
+            rel="noreferrer noopener"
           >{`built by @${TWITTER_HANDLE2}`}</a>
         </div>
       </div>
